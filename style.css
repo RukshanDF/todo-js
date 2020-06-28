@@ -1,4 +1,27 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+
 .todo {
-   background-color: aqua; 
-   height: auto;
+    background-color: silver; 
+    margin: 20px;
+    border: 1px black solid;
+}
+
+.todo .input {
+     margin: 20px;
+}
+
+.todo .list1 {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+    background-color: white; 
+}
+
+.todo .list1 li input[type=button] {
+    float: right;
 }
