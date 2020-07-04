@@ -6,3 +6,7 @@ function add(){
     i++;
 } 
 
+function deletEntry(index){
+    document.getElementById('todo-item-' + index ).remove();
+    i--;  
+}
