@@ -1,17 +1,23 @@
 var i = 0;
+function add() {
+    var li = document.createElement('li');
+    var span = document.createElement('span');
 
-function add(){
-    document.getElementById('element').innerHTML += '<li id="todo-item-' + i + '"><input type="checkbox" onchange="cancelItem(event, '+ i +')" /><span class="todo1"></span><input type="button" value="x" class="close" onclick="deletEntry(' + i + ')" /></li>' 
-    document.getElementsByClassName('todo1')[i].innerHTML = document.getElementsByClassName('new')[0].value;
+    span.innerText = document.getElementById('todo-text').value;
+    li.id = 'todo-item-' + i;
+    li.innerHTML = '<input type="checkbox" onchange="commpleteItem(event, '+ i +')" />';
+    li.appendChild(span);
+    li.innerHTML += '<input type="button" value="x" class="close" onclick="deletEntry(' + i + ')" />' ;
+
+    document.getElementById('todo-list').appendChild(li);
     i++;
 } 
 
-function deletEntry(index){
+function deletEntry(index) {
     document.getElementById('todo-item-' + index ).remove();
-    i--;  
 }
 
-function cancelItem(e, index){
+function commpleteItem(e, index) {
     var original;
     var newElement;
 
