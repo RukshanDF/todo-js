@@ -25,3 +25,7 @@ body{
 .todo .list1 li input[type=button] {
     float: right;
 }
+
+.todo .list1 li {
+    overflow: hidden;
+}
