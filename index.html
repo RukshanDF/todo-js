@@ -10,17 +10,11 @@
     <body>
         <div class="todo">
             <div class="input">
-                <input type="text" class="new" />
-                 <input type="button" value="ADD" />
+                <input type="text" id="todo-text" />
+                 <input type="button" value="ADD" onclick="add()" />
             </div>
 
-            <ul class="list1">
-                <li>
-                    <input type="checkbox" />
-                    <span class="todo1"></span>
-                    <input type="button" value="x" id="close" />    
-                </li>
-            </ul>
+            <ul class="list1" id="todo-list"></ul>
         </div>
 
         
